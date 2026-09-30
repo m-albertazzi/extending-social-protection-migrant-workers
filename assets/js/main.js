@@ -260,8 +260,8 @@
     });
     document.title = (route === 'overview' ? '' : LABELS[route] + ' · ') + SITE;
     renderPager(route);
+    window.scrollTo({ top: 0, behavior: 'auto' });
     if (!firstRender) {
-      window.scrollTo({ top: 0, behavior: 'auto' });
       var h = $('#' + route + ' h1');
       if (h) h.focus({ preventScroll: true });
     }
@@ -318,4 +318,6 @@
   renderParticipants();
   renderFeedback();
   show(routeFromHash());
+  // Loading with a #hash makes the browser jump to the section, under the fixed banner: reset to the top.
+  window.addEventListener('load', function () { if (location.hash) window.scrollTo({ top: 0, behavior: 'auto' }); });
 })();

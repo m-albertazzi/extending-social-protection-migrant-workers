@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Mobile / tablet top bar -->
-  <header class="topbar">
+  <div class="topbar">
     <a class="topbar__brand" href="#overview" aria-label="Course Hub – Overview">
       <img src="assets/images/itcilo-logo.png" alt="ITCILO – International Training Centre of the ILO" width="300" height="136">
     </a>
@@ -21,6 +21,18 @@
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       <span>Menu</span>
     </button>
+  </div>
+
+  <!-- Fixed banner: course title + hero image -->
+  <header class="banner">
+    <picture class="banner__pic">
+      <source type="image/webp" srcset="assets/images/hero-1000.webp 1000w, assets/images/hero.webp 2000w" sizes="(min-width: 1024px) 60vw, 50vw">
+      <img src="assets/images/hero.png" alt="Illustration of three patterned birds perched on a branch, one leaning on a walking stick" width="2000" height="666" fetchpriority="high">
+    </picture>
+    <div class="banner__text">
+      <p class="banner__kicker">ITCILO · Course Hub · A9719043</p>
+      <p class="banner__title">Extending Social Protection to Migrant Workers, Refugees and their Families</p>
+    </div>
   </header>
   <div class="scrim" id="scrim" hidden></div>
 
@@ -78,26 +90,21 @@
 
       <!-- ============ OVERVIEW ============ -->
       <section id="overview" class="view" data-title="Overview" aria-labelledby="overview-title">
-        <div class="hero">
-          <picture>
-            <source type="image/webp" srcset="assets/images/hero-1000.webp 1000w, assets/images/hero.webp 2000w" sizes="(min-width: 1100px) 1000px, 100vw">
-            <img class="hero__img" src="assets/images/hero.png" alt="Illustration of three patterned birds perched on a branch, one leaning on a walking stick" width="2000" height="666" fetchpriority="high">
-          </picture>
-          <div class="hero__panel">
-            <p class="hero__kicker">ITCILO · Programme on Social Protection, Governance and Tripartism</p>
-            <h1 id="overview-title" class="hero__title" tabindex="-1">Extending Social Protection to Migrant Workers, Refugees and their Families</h1>
-            <p class="hero__lead">Learn how to make social protection accessible and inclusive for migrant workers and refugees worldwide.</p>
-            <ul class="chips" aria-label="Course at a glance">
-              <li class="chip">19 October – 27 November 2026</li>
-              <li class="chip">6 weeks · Online</li>
-              <li class="chip">Course code A9719043</li>
-            </ul>
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#timetable" data-route="timetable">View the timetable</a>
-              <a class="btn btn--ghost-light" href="#course-requirements" data-route="course-requirements">Course requirements</a>
-            </div>
+        <header class="view__head">
+          <p class="eyebrow">Overview</p>
+          <h1 id="overview-title" class="view__title" tabindex="-1">Welcome to the course hub</h1>
+          <p class="lead">Learn how to make social protection accessible and inclusive for migrant workers and refugees worldwide.</p>
+          <ul class="chips" aria-label="Course at a glance">
+            <li class="chip">19 October – 27 November 2026</li>
+            <li class="chip">6 weeks · Online</li>
+            <li class="chip">Course code A9719043</li>
+            <li class="chip">Programme on Social Protection, Governance and Tripartism</li>
+          </ul>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#timetable" data-route="timetable">View the timetable</a>
+            <a class="btn btn--outline" href="#course-requirements" data-route="course-requirements">Course requirements</a>
           </div>
-        </div>
+        </header>
 
         <ul class="stats" aria-label="Key facts">
           <li class="stat"><span class="stat__num">6</span><span class="stat__label">weeks, online</span></li>
