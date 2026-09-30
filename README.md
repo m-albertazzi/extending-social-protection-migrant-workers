@@ -10,7 +10,8 @@ index.html              page shell, static sections (Overview, Course requiremen
 assets/css/styles.css   all styling; palette tokens (derived from the hero image) are at the top
 assets/js/data.js       content data: weeks, sessions, resource persons, participants, feedback link
 assets/js/main.js       section routing, mobile menu, rendering of timetable / people / participants
-assets/images/          itcilo-logo.png, hero.png (+ hero.webp, hero-1000.webp), people/ (photos)
+assets/images/          itcilo-logo.png, hero.png (+ webp variants; hero-banner*.webp adds headroom above the birds), people/ (photos)
+simulation/within-reach.html   self-contained decision simulation, embedded in the "Simulation: Within reach" tab
 ```
 
 ## Things to fill in later (all in `assets/js/data.js`)

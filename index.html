@@ -26,7 +26,7 @@
   <!-- Fixed banner: course title + hero image -->
   <header class="banner">
     <picture class="banner__pic">
-      <source type="image/webp" srcset="assets/images/hero-1000.webp 1000w, assets/images/hero.webp 2000w" sizes="(min-width: 1024px) 60vw, 50vw">
+      <source type="image/webp" srcset="assets/images/hero-banner-1000.webp 1000w, assets/images/hero-banner.webp 2000w" sizes="(min-width: 1024px) 46vw, 60vw">
       <img src="assets/images/hero.png" alt="Illustration of three patterned birds perched on a branch, one leaning on a walking stick" width="2000" height="666" fetchpriority="high">
     </picture>
     <div class="banner__text">
@@ -70,6 +70,9 @@
           <li><a class="nav__link" href="#participants" data-route="participants">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.3c2 .7 3.5 2.6 3.5 5.7"/></svg>
             <span>Participants</span></a></li>
+          <li><a class="nav__link" href="#simulation" data-route="simulation">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 20V10M12 20V4M19 20v-7"/><path d="M3 20h18"/></svg>
+            <span>Simulation: Within reach</span></a></li>
           <li><a class="nav__link" href="#feedback" data-route="feedback">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg>
             <span>Feedback</span></a></li>
@@ -103,6 +106,9 @@
           <div class="hero__actions">
             <a class="btn btn--primary" href="#timetable" data-route="timetable">View the timetable</a>
             <a class="btn btn--outline" href="#course-requirements" data-route="course-requirements">Course requirements</a>
+            <a class="btn btn--outline" href="#resource-persons" data-route="resource-persons">Resource Persons</a>
+            <a class="btn btn--outline" href="#participants" data-route="participants">Participants</a>
+            <a class="btn btn--outline" href="#simulation" data-route="simulation">Simulation: Within reach</a>
           </div>
         </header>
 
@@ -343,6 +349,22 @@
         </div>
       </section>
 
+      <!-- ============ SIMULATION ============ -->
+      <section id="simulation" class="view" data-title="Simulation: Within reach" aria-labelledby="sim-title" hidden>
+        <header class="view__head">
+          <p class="eyebrow">Simulation</p>
+          <h1 id="sim-title" class="view__title" tabindex="-1">Simulation: Within reach</h1>
+          <p class="lead">A decision simulation on extending social protection to migrant workers.</p>
+          <div class="hero__actions">
+            <a class="btn btn--outline" href="simulation/within-reach.html" target="_blank" rel="noopener">Open in a new tab</a>
+          </div>
+        </header>
+        <div class="simframe">
+          <iframe id="sim-frame" title="Within Reach: a decision simulation on extending social protection to migrant workers" data-src="simulation/within-reach.html" loading="lazy"></iframe>
+        </div>
+        <noscript><p class="notice">The simulation needs JavaScript. <a href="simulation/within-reach.html">Open it in a new page.</a></p></noscript>
+      </section>
+
       <!-- ============ FEEDBACK ============ -->
       <section id="feedback" class="view" data-title="Feedback" aria-labelledby="fb-title" hidden>
         <header class="view__head">
@@ -388,6 +410,7 @@
             <li><a href="#timetable" data-route="timetable">Timetable</a></li>
             <li><a href="#resource-persons" data-route="resource-persons">Resource Persons</a></li>
             <li><a href="#participants" data-route="participants">Participants</a></li>
+            <li><a href="#simulation" data-route="simulation">Simulation: Within reach</a></li>
             <li><a href="#feedback" data-route="feedback">Feedback</a></li>
           </ul>
         </div>

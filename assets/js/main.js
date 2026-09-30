@@ -4,10 +4,10 @@
   'use strict';
 
   var DATA = window.HUB_DATA || { config: {}, weeks: [], sessions: [], people: [], participants: [] };
-  var ROUTES = ['overview', 'course-requirements', 'timetable', 'resource-persons', 'participants', 'feedback'];
+  var ROUTES = ['overview', 'course-requirements', 'timetable', 'resource-persons', 'participants', 'simulation', 'feedback'];
   var LABELS = {
     'overview': 'Overview', 'course-requirements': 'Course requirements', 'timetable': 'Timetable',
-    'resource-persons': 'Resource Persons', 'participants': 'Participants', 'feedback': 'Feedback'
+    'resource-persons': 'Resource Persons', 'participants': 'Participants', 'simulation': 'Simulation: Within reach', 'feedback': 'Feedback'
   };
   var SITE = 'Course Hub · Extending Social Protection to Migrant Workers, Refugees and their Families';
 
@@ -260,6 +260,10 @@
     });
     document.title = (route === 'overview' ? '' : LABELS[route] + ' · ') + SITE;
     renderPager(route);
+    if (route === 'simulation') {
+      var f = $('#sim-frame');
+      if (f && !f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src'));
+    }
     window.scrollTo({ top: 0, behavior: 'auto' });
     if (!firstRender) {
       var h = $('#' + route + ' h1');
