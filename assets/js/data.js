@@ -288,7 +288,7 @@ window.HUB_DATA = {
       "name": "Momin Badarna",
       "sortKey": "Badarna",
       "org": "ILO",
-      "tbc": true,
+      "unit": "STREAM",
       "photo": null
     },
     {
@@ -342,14 +342,14 @@ window.HUB_DATA = {
     },
     {
       "name": "Nupur",
-      "sortKey": "~1",
+      "sortKey": "zzz1",
       "org": "UNICEF",
       "partial": true,
       "photo": null
     },
     {
       "name": "Mattia or Mauro",
-      "sortKey": "~2",
+      "sortKey": "zzz2",
       "org": "UNHCR",
       "partial": true,
       "tbc": true,

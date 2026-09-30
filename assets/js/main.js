@@ -187,7 +187,7 @@
           '<div class="person__photo">' + (photo ? '<img src="' + esc(photo) + '" alt="Photo of ' + esc(p.name) + '" loading="lazy">' : ICON.person) + '</div>' +
           '<h2 class="person__name">' + esc(p.name) + '</h2>' +
           (p.role ? '<p class="person__role">' + esc(p.role) + '</p>' : '') +
-          (p.org ? '<p class="person__org">' + esc(p.org) + '</p>' : '') +
+          (p.org ? '<p class="person__org">' + esc(p.org) + (p.unit ? ' · ' + esc(p.unit) : '') + '</p>' : '') +
           (flag ? '<p class="person__flag"><span class="tag tag--past">' + esc(flag) + '</span></p>' : '') +
         '</li>';
       }).join('');
