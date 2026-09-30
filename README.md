@@ -7,6 +7,7 @@ Plain HTML, CSS and JavaScript: no build step. Open `index.html`, or publish the
 
 ```
 index.html              page shell, static sections (Overview, Course requirements, Participants, Feedback)
+assets/css/fonts.css    ITCILO brand typeface (Noto Sans variable font, self-hosted in assets/fonts/), shared with the simulation
 assets/css/styles.css   all styling; palette tokens (derived from the hero image) are at the top
 assets/js/data.js       content data: weeks, sessions, resource persons, participants, feedback link
 assets/js/main.js       section routing, mobile menu, rendering of timetable / people / participants
@@ -25,3 +26,7 @@ simulation/within-reach.html   self-contained decision simulation, embedded in t
 ## Content sources
 
 Course Information Note, Annotated Agenda (sessions, dates, times, speakers), course requirement screenshots, supplied hero image and ITCILO logo. Cover image © Samuele Omati.
+
+## Typography
+
+Follows the ITCILO Brand Guidelines 2026: Noto Sans, ExtraCondensed Bold for headings, SemiCondensed for body text, weights Regular/Light/SemiBold/Bold, line height of at least 120%, left-aligned text. The brand accent faces Atmosphere and Velocity are licensed and not included.
