@@ -139,7 +139,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Samia Kazi Aoul, Karina Levina, ILO; STREAM consultant (TBC)",
+      "speakers": "Samia Kazi Aoul, ILO; STREAM consultant (TBC)",
       "summary": "Turns to countries of origin and the measures they can take for nationals abroad and returnees, including migrant welfare funds and their limitations, and the complementary measures that address practical obstacles.",
       "abstract": "This session turns to countries of origin, which can extend protection to nationals working abroad and to returnees: by allowing them to join or retain membership in national schemes, by creating schemes or mechanisms for migrant workers, by ensuring exportability of benefits and by giving returning nationals access to national floor benefits. It examines migrant welfare funds as a unilateral instrument – their legal basis, financing, governance and services in countries such as Bangladesh, India, Nepal, Pakistan, the Philippines and Sri Lanka – and the ILO’s guidance on their potential and limitations, notably that a fund cannot substitute for coverage in the country of employment or ensure portability of benefits. It concludes with complementary measures – information and pre-departure training, simplified procedures, access to justice, subsidised contributions and social dialogue – that address the practical obstacles which legal reform alone cannot remove.",
       "objectives": [
@@ -250,7 +250,7 @@ window.HUB_DATA = {
       "modules": [
         7
       ],
-      "speakers": "Panel discussion: Clara, ILO; Nupur, UNICEF; Mattia or Mauro, UNHCR",
+      "speakers": "Panel discussion: Clara, ILO; Nupur Kukrety, UNICEF; Mattia Polvanesi, UNHCR",
       "summary": "A panel bringing together ILO, UNICEF and UNHCR perspectives on refugees' access to social protection: the international legal framework, the obstacles, and the case for integrating refugees into national systems.",
       "abstract": "Refugees and asylum seekers face specific obstacles in accessing social protection: temporary legal status, an unpredictable length of stay, limited contribution histories, no protection from their country of origin and restricted access to the formal labour market, which in turn limits their access to contributory schemes. This panel discussion brings together ILO, UNICEF and UNHCR perspectives on the international legal framework – including the 1951 Refugee Convention, the ICESCR, the Convention on the Rights of the Child, the Global Compact on Refugees and the ILO guiding principles – and on the case for integrating refugees into national contributory and non-contributory systems rather than parallel humanitarian structures, including by channelling emergency cash transfers through existing systems. It also considers displacement in the context of climate change and how social protection can respond.",
       "objectives": [
@@ -310,12 +310,6 @@ window.HUB_DATA = {
       "photo": null
     },
     {
-      "name": "Karina Levina",
-      "sortKey": "Levina",
-      "org": "ILO",
-      "photo": null
-    },
-    {
       "name": "Luca Pellerano",
       "sortKey": "Pellerano",
       "org": "ILO",
@@ -341,18 +335,15 @@ window.HUB_DATA = {
       "photo": null
     },
     {
-      "name": "Nupur",
-      "sortKey": "zzz1",
+      "name": "Nupur Kukrety",
+      "sortKey": "Kukrety",
       "org": "UNICEF",
-      "partial": true,
       "photo": null
     },
     {
-      "name": "Mattia or Mauro",
-      "sortKey": "zzz2",
+      "name": "Mattia Polvanesi",
+      "sortKey": "Polvanesi",
       "org": "UNHCR",
-      "partial": true,
-      "tbc": true,
       "photo": null
     }
   ],
