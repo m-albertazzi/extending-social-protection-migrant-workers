@@ -190,14 +190,14 @@
           (local ? '<span class="session__local">' + esc(local) + '</span>' : '') +
         '</div>' +
         '<p class="session__summary">' + esc(s.summary) + '</p>' +
+      '</div>' +
+      '<div class="session__action">' + zoomAction(s) + '</div>' +
         '<details class="session__more"><summary>Full abstract, speakers and learning objectives</summary>' +
           '<div class="session__detail">' +
             '<h4>Speakers (as listed in the agenda)</h4><p>' + esc(tbc(s.speakers)) + '</p>' +
             '<h4>Abstract</h4><p>' + esc(s.abstract) + '</p>' +
             '<h4>Learning objectives: by the end of the session, participants will be able to</h4><ul>' + objectives + '</ul>' +
           '</div></details>' +
-      '</div>' +
-      '<div class="session__action">' + zoomAction(s) + '</div>' +
     '</li>';
   }
 

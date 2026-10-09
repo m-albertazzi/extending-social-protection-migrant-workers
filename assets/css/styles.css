@@ -347,14 +347,15 @@ strong { font-weight: 700; color: var(--ink); }
 .session__time span { display: inline-flex; align-items: center; gap: .4rem; }
 .session__time svg { width: 17px; height: 17px; fill: none; stroke: var(--rust); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .session__local { font-weight: 400; color: var(--ink-soft); }
-.session__summary { font-size: .96rem; color: var(--ink-soft); max-width: 62ch; }
-.session__more { margin-top: .75rem; }
+.session__summary { font-size: .96rem; color: var(--ink-soft); max-width: none; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
+.session__more { grid-column: 2 / -1; margin: -.5rem 0 0; min-width: 0; }
 .session__more summary { cursor: pointer; display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; font-size: .92rem; color: var(--rust-700); list-style: none; padding: .2rem 0; }
 .session__more summary::-webkit-details-marker { display: none; }
 .session__more summary::after { content: ""; width: .5rem; height: .5rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .15s; }
 .session__more[open] summary::after { transform: rotate(-135deg); }
 .session__more summary:hover { color: var(--teal-900); }
 .session__detail { margin-top: .75rem; padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: var(--bg); border: 1px solid var(--line); font-size: .93rem; }
+.session__detail p, .session__detail li { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
 .session__detail h4 { margin: 1rem 0 .4rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .07em; color: var(--rust-700); }
 .session__detail h4:first-child { margin-top: 0; }
 .session__detail ul { display: grid; gap: .4rem; padding-left: 1.1rem; list-style: disc; }
@@ -474,6 +475,8 @@ strong { font-weight: 700; color: var(--ink); }
   .stats { gap: .75rem; }
   .facts div { grid-template-columns: 1fr; gap: .1rem; }
   .session { grid-template-columns: 1fr; padding: 1.1rem; gap: .9rem; }
+  .session__more { grid-column: 1; }
+  .session__summary, .session__detail p, .session__detail li { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
   .datebadge { display: flex; width: auto; align-items: center; border-radius: 12px; }
   .datebadge__dow { padding: .55rem .8rem; flex: none; width: 4.2rem; }
   .datebadge__day { padding: 0 .5rem 0 .9rem; font-size: 1.6rem; }
