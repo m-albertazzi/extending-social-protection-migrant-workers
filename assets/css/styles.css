@@ -195,6 +195,24 @@ strong { font-weight: 700; color: var(--ink); }
 .btn--disabled { background: var(--marigold-100); color: var(--teal-900); border: 2px dashed var(--marigold-600); }
 .btn--disabled:hover { background: var(--marigold-100); box-shadow: none; transform: none; }
 
+/* ---------- Online sessions banner (Zoom + calendar) ---------- */
+.zoombar { margin-top: 1.5rem; }
+.zoombar__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; flex-wrap: wrap; background: var(--teal-900); color: #fff; border-radius: var(--radius); padding: 1.1rem 1.5rem; }
+.zoombar__text { flex: 1 1 24rem; min-width: 0; }
+.zoombar__eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ochre); margin: 0 0 .3rem; }
+.zoombar__title { font-size: 1.15rem; line-height: 1.25; font-weight: 700; color: #fff; margin: 0 0 .35rem; }
+.zoombar__note { font-size: .85rem; line-height: 1.45; color: rgba(255, 255, 255, .9); margin: 0; }
+.zoombar__actions { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; justify-content: flex-end; }
+.zoombar .btn { min-height: 40px; padding: .5rem .8rem; font-size: .84rem; border-radius: 8px; border-width: 1px; }
+.btn--sand { background: var(--cream); color: var(--teal-900); border-color: var(--cream); }
+.btn--sand:hover { background: #fff; border-color: #fff; color: var(--teal-900); transform: translateY(-1px); }
+.timetable-note + .zoombar { margin-top: 1.25rem; }
+@media (max-width: 720px) {
+  .zoombar__inner { padding: 1rem; }
+  .zoombar__actions { justify-content: flex-start; width: 100%; }
+  .zoombar__actions .btn { flex: 1 1 100%; }
+}
+
 /* ---------- Fixed banner (title + hero image) ---------- */
 .banner {
   position: fixed; top: 0; left: var(--sidebar-w); right: 0; height: var(--banner-h); z-index: 40;

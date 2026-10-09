@@ -22,6 +22,8 @@
     video: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg>',
     person: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c0-4.2 3.4-7 7.5-7s7.5 2.8 7.5 7"/></svg>',
     users: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.3c2 .7 3.5 2.6 3.5 5.7"/></svg>',
+    download: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>',
+    copy: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>',
     chat: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg>'
   };
 
@@ -64,6 +66,91 @@
     } catch (e) { return ''; }
   }
 
+  /* ---------------- Online sessions banner: Zoom, calendar file, copy link ---------------- */
+  function zoomRoom() { return safeUrl(DATA.config && DATA.config.zoomUrl); }
+
+  function icsEscape(t) { return String(t == null ? '' : t).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+  function icsFold(line) {
+    // RFC 5545: lines are folded at 75 octets; fold on characters, never inside a multi-byte one.
+    var out = [], cur = '', bytes = 0, limit = 75;
+    Array.from(line).forEach(function (ch) {
+      var b = unescape(encodeURIComponent(ch)).length;
+      if (bytes + b > limit) { out.push(cur); cur = ' ' + ch; bytes = 1 + b; limit = 75; }
+      else { cur += ch; bytes += b; }
+    });
+    out.push(cur);
+    return out.join('\r\n');
+  }
+  function icsStamp(d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+  function buildIcs() {
+    var room = zoomRoom();
+    var stamp = icsStamp(new Date());
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ITCILO//Course Hub A9719043//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'X-WR-CALNAME:' + icsEscape('Extending Social Protection to Migrant Workers, Refugees and their Families (A9719043)'), 'X-WR-TIMEZONE:Europe/Rome'];
+    DATA.sessions.slice().sort(function (a, b) { return new Date(a.start) - new Date(b.start); }).forEach(function (s) {
+      var url = safeUrl(s.zoomUrl) || room;
+      var desc = 'Live session ' + s.number + ' of the online course Extending Social Protection to Migrant Workers, Refugees and their Families (A9719043).' +
+        '\nSpeakers: ' + tbc(s.speakers) + (url ? '\nJoin on Zoom: ' + url : '');
+      lines.push('BEGIN:VEVENT',
+        'UID:session-' + s.number + '@a9719043.course-hub',
+        'DTSTAMP:' + stamp,
+        'DTSTART:' + icsStamp(new Date(s.start)),
+        'DTEND:' + icsStamp(new Date(s.end)),
+        'SUMMARY:' + icsEscape('Session ' + s.number + ': ' + s.title),
+        'DESCRIPTION:' + icsEscape(desc));
+      if (url) lines.push('LOCATION:' + icsEscape(url), 'URL:' + url);
+      lines.push('END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    return lines.map(icsFold).join('\r\n') + '\r\n';
+  }
+  function downloadIcs() {
+    var blob = new Blob([buildIcs()], { type: 'text/calendar;charset=utf-8' });
+    var name = 'itcilo-A9719043-online-sessions.ics';
+    if (window.navigator && navigator.msSaveOrOpenBlob) { navigator.msSaveOrOpenBlob(blob, name); return; }
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    toast('Calendar file downloaded: open it to add all ' + DATA.sessions.length + ' sessions to your calendar.');
+  }
+  function copyText(text, done) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:-100px;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      ta.remove(); done(ok);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    else fallback();
+  }
+  function renderZoomBars() {
+    var room = zoomRoom();
+    $$('[data-zoombar]').forEach(function (el) {
+      var join = room
+        ? '<a class="btn btn--sand" href="' + esc(room) + '" target="_blank" rel="noopener noreferrer"><span>Join on Zoom <span aria-hidden="true">↗</span></span><span class="sr-only"> (opens in a new tab)</span></a>'
+        : '<button type="button" class="btn btn--sand" data-zoom-placeholder="all"><span>Join on Zoom</span></button>';
+      el.innerHTML = '<div class="zoombar__inner">' +
+        '<div class="zoombar__text"><p class="zoombar__eyebrow">Online sessions</p>' +
+        '<h2 class="zoombar__title">All webinars take place in the same Zoom room</h2>' +
+        '<p class="zoombar__note">Times are Turin time (CET/CEST). The calendar file converts them to your own time zone.</p></div>' +
+        '<div class="zoombar__actions">' + join +
+        '<button type="button" class="btn btn--ghost-light" data-ics>Add all online sessions to calendar (.ics)</button>' +
+        (room ? '<button type="button" class="btn btn--ghost-light" data-copy-zoom>Copy Zoom link</button>' : '') +
+        '</div></div>';
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-ics]')) { downloadIcs(); return; }
+      if (e.target.closest('[data-copy-zoom]')) {
+        copyText(zoomRoom(), function (ok) { toast(ok ? 'Zoom link copied to the clipboard.' : 'Could not copy automatically. The link is ' + zoomRoom()); });
+      }
+    });
+  }
+
   /* ---------------- Timetable ---------------- */
   function sessionStatus(s, now) {
     var st = new Date(s.start).getTime(), en = new Date(s.end).getTime();
@@ -73,7 +160,7 @@
   }
 
   function zoomAction(s) {
-    var url = safeUrl(s.zoomUrl);
+    var url = safeUrl(s.zoomUrl || (DATA.config && DATA.config.zoomUrl));
     if (url) {
       return '<a class="btn btn--primary" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + ICON.video +
         '<span>Join on Zoom<span class="sr-only"> – Session ' + s.number + '</span></span></a>';
@@ -146,7 +233,7 @@
     });
     root.addEventListener('click', function (e) {
       var b = e.target.closest('[data-zoom-placeholder]');
-      if (b) toast('The Zoom link for Session ' + b.getAttribute('data-zoom-placeholder') + ' has not been added yet.');
+      if (b) toast('The Zoom link has not been added yet.');
     });
 
     if ('IntersectionObserver' in window) {
@@ -317,6 +404,7 @@
   });
 
   /* ---------------- Init ---------------- */
+  renderZoomBars();
   renderTimetable();
   renderPeople();
   renderParticipants();

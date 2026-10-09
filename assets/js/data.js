@@ -6,7 +6,8 @@
 window.HUB_DATA = {
   "config": {
     "feedbackUrl": null,
-    "note": "Set feedbackUrl to the feedback form address to activate the Feedback button. Set zoomUrl on a session to activate its Join button."
+    "note": "Set feedbackUrl to the feedback form address to activate the Feedback button. zoomUrl is the single Zoom room used by all live sessions.",
+    "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
   },
   "weeks": [
     {
@@ -53,13 +54,13 @@ window.HUB_DATA = {
       "modules": [],
       "speakers": "ITCILO team",
       "summary": "Welcomes participants and sets the course in motion. The course team presents the rationale for the course and the blended learning approach, and participants introduce themselves, their institutions and the migration corridors or groups they work on.",
-      "abstract": "This opening live session welcomes participants and sets the course in motion. The course team presents the rationale for the course – 169 million of the 281 million international migrants are migrant workers, yet they are among the groups most often excluded from social protection – and walks through the blended learning approach: self-paced e-Campus modules, live sessions, forum discussions, group work and an individual end-of-course assignment. Participants introduce themselves, their institutions and the migration corridors or groups they work on, and the session previews how the following weeks build from the rationale and legal framework, through unilateral and multilateral measures, to financing and specific groups.",
+      "abstract": "This opening live session welcomes participants and sets the course in motion. The course team presents the rationale for the course – 169 million of the 281 million international migrants are migrant workers, yet they are among the groups most often excluded from social protection – and walks through the blended learning approach: self-paced e-Campus modules, live sessions, forum discussions, group work and an individual end-of-course assignment. Participants introduce themselves, their institutions and the migration corridors or groups they work on, and the session previews how the following weeks build from the rationale and legal framework, through unilateral and multilateral measures, to financing and specific groups. It also flags the group work, which is introduced on Friday 30 October and presented in the closing session on Friday 27 November.",
       "objectives": [
         "Describe the structure, phases and requirements of the course, including the weekly forums, the group work and the end-of-course assignment that lead to the Certificate of Achievement.",
         "Explain why migrant workers, refugees and their families are so often left without social protection, and outline the policy options the course will examine.",
         "Identify the countries, corridors and groups of migrant workers or refugees that each participant would like to explore during the course."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
       "id": "session-2",
@@ -81,7 +82,7 @@ window.HUB_DATA = {
         "Distinguish legal restrictions from practical barriers to access, and trace their underlying causes to the principles of nationality and territoriality.",
         "Outline the five policy options in the ILO approach and the role of social partners in planning, designing and monitoring them."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
       "id": "session-3",
@@ -103,11 +104,33 @@ window.HUB_DATA = {
         "Explain the four principles that ILO social security and migrant worker standards apply to migrant workers’ social protection.",
         "Assess how ratification, supervision and incorporation into national legislation help translate international standards into practice."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
       "id": "session-4",
       "number": 4,
+      "week": 2,
+      "title": "Introduction to the Group Work",
+      "date": "2026-10-30",
+      "timeLabel": "2.00 – 3.30 pm CET",
+      "start": "2026-10-30T14:00:00+01:00",
+      "end": "2026-10-30T15:30:00+01:00",
+      "modules": [
+        6
+      ],
+      "speakers": "ITCILO course team",
+      "summary": "Introduces the group work that runs alongside the course and ends with presentations on Friday 27 November: its purpose, organisation, timeline and expected output, built on the three-step approach of the ILO Intervention Models.",
+      "abstract": "This session introduces the group work that runs alongside the rest of the course and culminates in the presentations in the closing session on Friday 27 November. The course team explains the purpose, organisation, timeline and expected output of the group work, in which participants focus on one of three groups of migrant workers who face particular barriers to social protection – migrant domestic workers, migrant seasonal agricultural workers and migrant workers in an irregular situation. Groups apply the three-step approach of the ILO Intervention Models: setting up coordination and implementation arrangements, undertaking a situational analysis, and holding consultations to develop policy measures for the extension of social protection. Participants have the opportunity to ask questions and to plan how their group will collaborate between sessions.",
+      "objectives": [
+        "Describe the purpose, organisation, timeline and expected output of the group work leading to the presentations on 27 November.",
+        "Explain the three-step approach of the ILO Intervention Models – coordination and implementation arrangements, situational analysis and consultations to develop policy measures – as a framework for the group work.",
+        "Identify the group of migrant workers and the country context that their group will focus on, and plan how to collaborate between sessions."
+      ],
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
+    },
+    {
+      "id": "session-5",
+      "number": 5,
       "week": 3,
       "title": "Building Inclusive Social Protection Systems and Extending Social Protection, including Health Protection",
       "date": "2026-11-03",
@@ -125,11 +148,11 @@ window.HUB_DATA = {
         "Describe how flexible qualifying conditions, retroactive contributions and lump-sum payments help migrant workers meet eligibility requirements.",
         "Analyse country approaches to extending health protection to migrant workers and their families, including those in an irregular situation."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-5",
-      "number": 5,
+      "id": "session-6",
+      "number": 6,
       "week": 3,
       "title": "Unilateral and Complementary Measures including Migrant Welfare Funds",
       "date": "2026-11-05",
@@ -147,11 +170,11 @@ window.HUB_DATA = {
         "Assess the potential and limitations of migrant welfare funds as a social protection instrument, including the design conditions that make them effective.",
         "Match complementary measures to the practical barriers they are designed to address."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-6",
-      "number": 6,
+      "id": "session-7",
+      "number": 7,
       "week": 4,
       "title": "Bilateral and Multilateral Social Security Agreements",
       "date": "2026-11-10",
@@ -170,11 +193,11 @@ window.HUB_DATA = {
         "Compare bilateral and multilateral agreements, and social security provisions in bilateral labour agreements, in terms of advantages, limits and complementarity.",
         "Draw lessons from bilateral and regional examples for the corridors and regions participants work on."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-7",
-      "number": 7,
+      "id": "session-8",
+      "number": 8,
       "week": 4,
       "title": "Implementing Social Security Agreements",
       "date": "2026-11-12",
@@ -192,11 +215,11 @@ window.HUB_DATA = {
         "Describe the institutional, operational and ICT arrangements needed to implement an agreement.",
         "Identify capacity and administrative obstacles to negotiating and implementing agreements in participants’ own countries, and measures to address them."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-8",
-      "number": 8,
+      "id": "session-9",
+      "number": 9,
       "week": 5,
       "title": "Social Protection in the GCC–South Asia Corridor – Evidence from the STREAM Project",
       "date": "2026-11-17",
@@ -214,11 +237,11 @@ window.HUB_DATA = {
         "Analyse how measures in countries of origin, such as welfare funds and voluntary affiliation, interact with the coverage available in countries of employment.",
         "Draw lessons from the corridor evidence that can be applied to other migration corridors."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-9",
-      "number": 9,
+      "id": "session-10",
+      "number": 10,
       "week": 5,
       "title": "Financing the Extension of Social Protection to Migrant Workers",
       "date": "2026-11-19",
@@ -236,11 +259,11 @@ window.HUB_DATA = {
         "Compare financing options – tax financing, contributions, subsidised contributions, welfare fund fees and international solidarity – against the principle of solidarity in financing.",
         "Make the case to decision makers that including migrant workers can strengthen, rather than weaken, the financial sustainability of social protection systems."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-10",
-      "number": 10,
+      "id": "session-11",
+      "number": 11,
       "week": 6,
       "title": "Extending Social Protection to Refugees and other Forcibly Displaced Persons",
       "date": "2026-11-24",
@@ -258,29 +281,29 @@ window.HUB_DATA = {
         "Identify the legal and practical obstacles refugees and asylum seekers face, and how these differ from those of other migrant workers.",
         "Assess policy options for including refugees and other displaced persons in national social protection systems, and for linking humanitarian assistance to those systems."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     },
     {
-      "id": "session-11",
-      "number": 11,
+      "id": "session-12",
+      "number": 12,
       "week": 6,
       "title": "Specific Groups (Domestic Migrant Workers, Agricultural Seasonal Migrant Workers and Migrants in an Irregular Situation): Presentation of Group Work and Closing Ceremony",
-      "date": "2026-11-26",
+      "date": "2026-11-27",
       "timeLabel": "2.00 – 3.30 pm CET",
-      "start": "2026-11-26T14:00:00+01:00",
-      "end": "2026-11-26T15:30:00+01:00",
+      "start": "2026-11-27T14:00:00+01:00",
+      "end": "2026-11-27T15:30:00+01:00",
       "modules": [
         6
       ],
       "speakers": "ITCILO course team",
-      "summary": "Participant groups present their group work on one of three groups of migrant workers, facilitators give feedback, and the closing ceremony reviews key takeaways and next steps, including the individual end-of-course assignment.",
-      "abstract": "This closing session focuses on three groups of migrant workers who face particular barriers to social protection. Migrant domestic workers are frequently excluded from labour and social security laws and work in private households, for multiple employers; migrant seasonal agricultural workers have temporary, often informal work that makes qualifying periods hard to meet; and migrant workers in an irregular situation are often excluded by law and may avoid services for fear of deportation. Participant groups present their group work, applying the ILO Intervention Model approach – obstacles, relevant standards and policy measures – to one of these groups. Facilitators provide feedback, and the closing ceremony reviews key takeaways from the six weeks and the next steps, including the individual end-of-course assignment.",
+      "summary": "Participant groups present the group work introduced in Session 4, facilitators give feedback, and the closing ceremony reviews key takeaways and next steps, including the individual end-of-course assignment.",
+      "abstract": "This closing session focuses on three groups of migrant workers who face particular barriers to social protection. Migrant domestic workers are frequently excluded from labour and social security laws and work in private households, for multiple employers; migrant seasonal agricultural workers have temporary, often informal work that makes qualifying periods hard to meet; and migrant workers in an irregular situation are often excluded by law and may avoid services for fear of deportation. Participant groups present the group work introduced in Session 4, applying the ILO Intervention Model approach – obstacles, relevant standards and policy measures – to one of these groups. Facilitators provide feedback, and the closing ceremony reviews key takeaways from the six weeks and the next steps, including the individual end-of-course assignment.",
       "objectives": [
         "Present and justify a set of policy measures to extend social protection to a specific group of migrant workers, applying the approach of the ILO Intervention Models.",
         "Compare the obstacles and measures for domestic, seasonal agricultural and irregular migrant workers, distinguishing what is group-specific from what is common to all.",
         "Give constructive peer feedback, and identify next steps for applying the course learning, including the end-of-course assignment."
       ],
-      "zoomUrl": null
+      "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
     }
   ],
   "people": [
