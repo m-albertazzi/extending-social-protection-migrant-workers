@@ -514,3 +514,9 @@ strong { font-weight: 700; color: var(--ink); }
 @media (max-width: 340px) {
   .banner__title { font-size: .82rem; }
 }
+
+/* ---------- Pilot notice ---------- */
+.pilot { margin-top: 1.75rem; }
+.pilot .card__title { font-size: 1.15rem; margin: .25rem 0 .6rem; }
+.pilot p:last-child { margin-bottom: 0; }
+#feedback .pilot { margin-top: 1.25rem; }
