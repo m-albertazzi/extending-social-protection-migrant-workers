@@ -170,7 +170,7 @@ footer b{color:#fff}
   <div class="meters" id="meters" aria-label="Indicators"></div>
 </div></div>
 <main><div class="wrap" id="app" aria-live="polite"></div></main>
-<footer><div class="wrap"><b>Within Reach.</b> Solandra, Kessaria and Ondara are fictional. Draft for review: content, framing and indicator balance not yet cleared with ILO counterparts.</div></footer>
+<footer><div class="wrap"><b>Within Reach.</b> A learning tool set in fictional countries: Solandra, Kessaria and Ondara do not exist. Its ratings reflect the course team&rsquo;s reading of ILO standards and guidance; they are not official ILO positions.</div></footer>
 <script>
 // Shared scoring engine. Inlined into simulation.html and used by build.js for the storyboard.
 function normalizeData(D) {
@@ -396,6 +396,7 @@ function vEnd(){
   </section>
   <section class="card"><h3>The system</h3>
     ${["c","s","t"].map(k=>`<div class="sysrow"><div><div class="bandlab">${esc(D.indicators[k].label)}</div><div class="v">${Math.round(S.sys[k])}</div></div><p style="margin:0">${esc(D.systemBands[k][bandIndex(S.sys[k])])}</p></div>`).join("")}
+    <p class="muted small" style="margin-top:12px">The simulation does not model the cost of reforms in detail, so the sustainability indicator moves little. In the group work, your group works out how to finance its package (Stage 3).</p>
   </section>
   <section class="card"><h3>Your choices against the intervention models</h3>
     <p>You chose the most appropriate option in <b>${nBest} of ${all.length}</b> decisions (${score} of ${all.length*3} points, counting 3 for most appropriate, 2 workable, 1 limited, 0 counterproductive).</p>
@@ -406,6 +407,7 @@ function vEnd(){
     <p class="muted small" style="margin-top:12px">The intervention models stress that these measures are not mutually exclusive. The most effective strategies combine unilateral reform in the country of employment, coordination through agreements, action by countries of origin and complementary measures that make rights usable.</p>
   </section>
   ${notes.length?`<section class="card"><h3>What you set in motion</h3><ul class="notes">${notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></section>`:""}
+  <section class="card"><h3>What comes next</h3><p style="margin:0">In the group work, your group designs the whole package and works out how to pay for it.</p></section>
   <section class="card"><h3>Debrief questions</h3><ol class="deb">${D.debrief.map(q=>`<li>${esc(q)}</li>`).join("")}</ol></section>
   <section class="card"><h3>Instruments and guidance referenced</h3><ul class="notes small">${D.instruments.map(q=>`<li>${esc(q)}</li>`).join("")}</ul>
     <div class="btnrow"><button class="btn ghost" data-go="print">Print or save as PDF</button><button class="btn" data-go="restart">Play again</button></div></section>`;
