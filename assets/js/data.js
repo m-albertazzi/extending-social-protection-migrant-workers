@@ -5,7 +5,7 @@
  */
 window.HUB_DATA = {
   "config": {
-    "feedbackUrl": null,
+    "feedbackUrl": "https://ecampus.itcilo.org/mod/feedback/view.php?id=508759",
     "note": "Set feedbackUrl to the feedback form address to activate the Feedback button. zoomUrl is the single Zoom room used by all live sessions.",
     "zoomUrl": "https://itcilo-org.zoom.us/j/62071738280"
   },
