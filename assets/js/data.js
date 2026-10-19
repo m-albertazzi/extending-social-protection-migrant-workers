@@ -162,7 +162,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Samia Kazi-Aoul, ILO; STREAM consultant (TBC)",
+      "speakers": "Samia Kazi-Aoul, ILO",
       "summary": "Turns to countries of origin and the measures they can take for nationals abroad and returnees, including migrant welfare funds and their limitations, and the complementary measures that address practical obstacles.",
       "abstract": "This session turns to countries of origin, which can extend protection to nationals working abroad and to returnees: by allowing them to join or retain membership in national schemes, by creating schemes or mechanisms for migrant workers, by ensuring exportability of benefits and by giving returning nationals access to national floor benefits. It examines migrant welfare funds as a unilateral instrument – their legal basis, financing, governance and services in countries such as Bangladesh, India, Nepal, Pakistan, the Philippines and Sri Lanka – and the ILO’s guidance on their potential and limitations, notably that a fund cannot substitute for coverage in the country of employment or ensure portability of benefits. It concludes with complementary measures – information and pre-departure training, simplified procedures, access to justice, subsidised contributions and social dialogue – that address the practical obstacles which legal reform alone cannot remove.",
       "objectives": [
