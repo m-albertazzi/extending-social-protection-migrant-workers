@@ -313,7 +313,7 @@ window.HUB_DATA = {
       "org": "ILO",
       "unit": "STREAM",
       "linkedin": "https://www.linkedin.com/in/momin-badarna/",
-      "photo": null
+      "photo": "assets/images/people/momin-badarna.jpg"
     },
     {
       "name": "Mariano Brener",
@@ -328,14 +328,14 @@ window.HUB_DATA = {
       "org": "ILO",
       "tbc": true,
       "linkedin": "https://www.linkedin.com/in/umberto-cattaneo-phd-69564710b/",
-      "photo": null
+      "photo": "assets/images/people/umberto-cattaneo.jpg"
     },
     {
       "name": "Samia Kazi-Aoul",
       "sortKey": "Kazi-Aoul",
       "org": "ILO",
       "linkedin": "https://www.linkedin.com/in/samia-kazi-aoul-4a47b31/",
-      "photo": null
+      "photo": "assets/images/people/samia-kazi-aoul.jpg"
     },
     {
       "name": "Nupur Kukrety",
@@ -343,14 +343,14 @@ window.HUB_DATA = {
       "org": "UNICEF",
       "tbc": true,
       "linkedin": "https://www.linkedin.com/in/nupur-kukrety-19253a6/",
-      "photo": null
+      "photo": "assets/images/people/nupur-kukrety.jpg"
     },
     {
       "name": "Luca Pellerano",
       "sortKey": "Pellerano",
       "org": "ILO",
       "linkedin": "https://www.linkedin.com/in/luca-pellerano-3a4b6a90/",
-      "photo": null
+      "photo": "assets/images/people/luca-pellerano.jpg"
     },
     {
       "name": "Mattia Polvanesi",
@@ -358,7 +358,7 @@ window.HUB_DATA = {
       "org": "UNHCR",
       "tbc": true,
       "linkedin": "https://www.linkedin.com/in/mattia-polvanesi-a2464a58/",
-      "photo": null
+      "photo": "assets/images/people/mattia-polvanesi.jpg"
     },
     {
       "name": "Lou Tessier",
@@ -366,7 +366,7 @@ window.HUB_DATA = {
       "org": "ILO",
       "tbc": true,
       "linkedin": "https://www.linkedin.com/in/loutessier/",
-      "photo": null
+      "photo": "assets/images/people/lou-tessier.jpg"
     },
     {
       "name": "Clara Van Panhuys",
@@ -380,7 +380,7 @@ window.HUB_DATA = {
       "sortKey": "Xiao",
       "org": "ILO",
       "linkedin": "https://www.linkedin.com/in/liyuanxiao/",
-      "photo": null
+      "photo": "assets/images/people/liyuan-xiao.jpg"
     }
   ],
   "participants": []
