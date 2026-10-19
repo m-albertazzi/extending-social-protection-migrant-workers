@@ -291,7 +291,7 @@
       draw(b.getAttribute('data-org'));
     });
     draw('');
-    note.textContent = 'Entries marked “to be confirmed” may change. The ITCILO course team and a STREAM consultant (to be confirmed) also contribute to the live sessions.';
+    note.textContent = 'Entries marked “to be confirmed” may change.';
   }
 
   /* ---------------- Participants & feedback ---------------- */
