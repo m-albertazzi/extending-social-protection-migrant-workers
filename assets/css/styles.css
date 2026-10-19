@@ -373,12 +373,16 @@ strong { font-weight: 700; color: var(--ink); }
 .person { text-align: left; padding: 1.5rem 1.25rem 1.4rem; transition: transform .15s, box-shadow .15s; display: flex; flex-direction: column; align-items: flex-start; }
 .person:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .person__photo { width: 108px; height: 108px; border-radius: 50%; margin-bottom: 1rem; overflow: hidden; background: var(--cream); border: 4px solid var(--marigold); display: grid; place-items: center; }
-.person__photo img { width: 100%; height: 100%; object-fit: cover; }
+.person__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .person__photo svg { width: 62%; height: 62%; fill: none; stroke: var(--teal-800); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .person__name { font-size: 1.15rem; font-weight: 700; }
 .person__role { margin: .3rem 0 0; font-size: .9rem; color: var(--ink-soft); }
-.person__org { margin: .35rem 0 0; font-weight: 700; font-size: .85rem; color: var(--rust-700); letter-spacing: .04em; }
-.person__flag { margin-top: .6rem; }
+.person__org { margin: .35rem 0 .9rem; font-weight: 700; font-size: .85rem; color: var(--rust-700); letter-spacing: .04em; }
+.person__flag { margin: -.4rem 0 .9rem; }
+.tag--tbc { background: var(--marigold-100); color: var(--rust-700); border: 1px dashed var(--marigold-600); }
+.person__li { margin-top: auto; display: inline-flex; align-items: center; gap: .45rem; min-height: 38px; font-size: .85rem; font-weight: 700; color: var(--teal-900); border: 2px solid var(--teal-900); border-radius: 999px; padding: .3rem .85rem; text-decoration: none; transition: background-color .15s, color .15s; }
+.person__li svg { width: 16px; height: 16px; flex: none; }
+.person__li:hover, .person__li:focus-visible { background: #0A66C2; border-color: #0A66C2; color: #fff; }
 
 /* ---------- Participants / Feedback ---------- */
 .audience { display: grid; grid-template-columns: repeat(2, 1fr); gap: .9rem; }

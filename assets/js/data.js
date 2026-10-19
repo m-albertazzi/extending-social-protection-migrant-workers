@@ -74,7 +74,7 @@ window.HUB_DATA = {
       "modules": [
         1
       ],
-      "speakers": "Samia Kazi Aoul, Clara Van Panhuys, ILO (TBC)",
+      "speakers": "Samia Kazi-Aoul, Clara Van Panhuys, ILO",
       "summary": "Sets out the human, social and economic case for extending social protection to migrant workers, explains the legal and practical barriers to access, and introduces the five policy options in the ILO approach that structure the rest of the course.",
       "abstract": "Social security is a human right that migrant workers should enjoy throughout the migration cycle, and extending it to them is key to income security, to reducing poverty and inequality and to decent working conditions. This session sets out the human, social and economic case for extension, and explains why the obstacles arise: the principles of nationality and territoriality, legal restrictions on access (for example based on status, sector or insufficient qualifying periods) and practical barriers (lack of information, complex procedures, limited contributory capacity, limited fiscal space and weak representation). It closes by introducing the five policy options in the ILO approach – ratification and application of standards, social security agreements, social security provisions in bilateral labour agreements, unilateral measures and complementary measures – which structure the rest of the course.",
       "objectives": [
@@ -140,7 +140,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Clara Van Panhuys, Lou Tessier, ILO",
+      "speakers": "Clara Van Panhuys, ILO; Lou Tessier, ILO (TBC)",
       "summary": "Presents the unilateral measures countries of employment can adopt on their own, such as equality of treatment, flexible qualifying conditions and non-contributory measures, with a particular focus on health protection.",
       "abstract": "Countries of employment can decide to extend social protection to migrant workers on their own, without waiting for an agreement with another State. This session presents the unilateral measures available to them: enshrining equality of treatment in law – the ILO’s mapping of 120 countries found that 58 per cent grant it for contributory social security and 62 per cent for healthcare – allowing exportability of benefits, adapting qualifying conditions (retroactive payment of missed contributions, pro rata benefits, exemption from double coverage), and lump-sum payments or reimbursement of contributions. It then considers non-contributory measures and national social protection floors, with a particular focus on health protection, drawing on country examples such as Thailand, Switzerland and Argentina on access to healthcare for migrants, including those in an irregular situation.",
       "objectives": [
@@ -162,7 +162,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Samia Kazi Aoul, ILO; STREAM consultant (TBC)",
+      "speakers": "Samia Kazi-Aoul, ILO; STREAM consultant (TBC)",
       "summary": "Turns to countries of origin and the measures they can take for nationals abroad and returnees, including migrant welfare funds and their limitations, and the complementary measures that address practical obstacles.",
       "abstract": "This session turns to countries of origin, which can extend protection to nationals working abroad and to returnees: by allowing them to join or retain membership in national schemes, by creating schemes or mechanisms for migrant workers, by ensuring exportability of benefits and by giving returning nationals access to national floor benefits. It examines migrant welfare funds as a unilateral instrument – their legal basis, financing, governance and services in countries such as Bangladesh, India, Nepal, Pakistan, the Philippines and Sri Lanka – and the ILO’s guidance on their potential and limitations, notably that a fund cannot substitute for coverage in the country of employment or ensure portability of benefits. It concludes with complementary measures – information and pre-departure training, simplified procedures, access to justice, subsidised contributions and social dialogue – that address the practical obstacles which legal reform alone cannot remove.",
       "objectives": [
@@ -207,7 +207,7 @@ window.HUB_DATA = {
       "modules": [
         3
       ],
-      "speakers": "Mariano Brener, ISSA and Xiao Liyuan, ILO (TBC)",
+      "speakers": "Mariano Brener, ISSA; Liyuan Xiao, ILO",
       "summary": "Walks through the eight-step process for negotiating a social security agreement and what it takes to put one into practice: governance, operational processes, ICT-based data exchange and administrative capacity.",
       "abstract": "Concluding an agreement is only the beginning: it delivers benefits to migrant workers only if it is applied in practice. This session first walks through the eight-step negotiation process, from preliminary discussions and the preparation of a draft to signature, approval, the administrative arrangement and entry into force. It then turns to implementation: governance and management structures, operational processes and information models, security and authentication, ICT-based data exchange between institutions, and the ongoing communication between liaison offices. Participants discuss the administrative and technical capacity that countries need and how obstacles can be anticipated during negotiation.",
       "objectives": [
@@ -251,7 +251,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Umberto Cattaneo, ILO",
+      "speakers": "Umberto Cattaneo, ILO (TBC)",
       "summary": "Examines how extending social protection to migrant workers can be financed: fiscal space, subsidised contributions and solidarity-based financing, and the case that inclusion improves financial sustainability.",
       "abstract": "Extending social protection to migrant workers only lasts if it can be financed. This session looks at the financing challenges identified in the Guide – migrant workers’ often limited contributory capacity, and limited fiscal space and investment in social protection – and at the options available: enhancing fiscal space (through reallocating public expenditure, increasing tax revenue, expanding contributions and other options), subsidising the contributions of migrant workers or refugees, including through international solidarity, and financing benefits collectively on the principle of solidarity, rather than from migrants’ fees alone, as the guidance on migrant welfare funds stresses. It also considers the case that inclusion improves financial sustainability by widening the risk pool and the contributory base, and the role of costing and fiscal space analyses in preparing reforms.",
       "objectives": [
@@ -273,7 +273,7 @@ window.HUB_DATA = {
       "modules": [
         7
       ],
-      "speakers": "Panel discussion: Clara, ILO; Nupur Kukrety, UNICEF; Mattia Polvanesi, UNHCR",
+      "speakers": "Panel discussion: Clara Van Panhuys, ILO; Nupur Kukrety, UNICEF (TBC); Mattia Polvanesi, UNHCR (TBC)",
       "summary": "A panel bringing together ILO, UNICEF and UNHCR perspectives on refugees' access to social protection: the international legal framework, the obstacles, and the case for integrating refugees into national systems.",
       "abstract": "Refugees and asylum seekers face specific obstacles in accessing social protection: temporary legal status, an unpredictable length of stay, limited contribution histories, no protection from their country of origin and restricted access to the formal labour market, which in turn limits their access to contributory schemes. This panel discussion brings together ILO, UNICEF and UNHCR perspectives on the international legal framework – including the 1951 Refugee Convention, the ICESCR, the Convention on the Rights of the Child, the Global Compact on Refugees and the ILO guiding principles – and on the case for integrating refugees into national contributory and non-contributory systems rather than parallel humanitarian structures, including by channelling emergency cash transfers through existing systems. It also considers displacement in the context of climate change and how social protection can respond.",
       "objectives": [
@@ -312,61 +312,74 @@ window.HUB_DATA = {
       "sortKey": "Badarna",
       "org": "ILO",
       "unit": "STREAM",
+      "linkedin": "https://www.linkedin.com/in/momin-badarna/",
       "photo": null
     },
     {
       "name": "Mariano Brener",
       "sortKey": "Brener",
       "org": "ISSA",
+      "linkedin": "https://www.linkedin.com/in/mariano-brener-a8a2565/",
       "photo": null
     },
     {
       "name": "Umberto Cattaneo",
       "sortKey": "Cattaneo",
       "org": "ILO",
-      "photo": null
-    },
-    {
-      "name": "Samia Kazi Aoul",
-      "sortKey": "Kazi Aoul",
-      "org": "ILO",
-      "photo": null
-    },
-    {
-      "name": "Luca Pellerano",
-      "sortKey": "Pellerano",
-      "org": "ILO",
-      "photo": null
-    },
-    {
-      "name": "Lou Tessier",
-      "sortKey": "Tessier",
-      "org": "ILO",
-      "photo": null
-    },
-    {
-      "name": "Clara Van Panhuys",
-      "sortKey": "Van Panhuys",
-      "org": "ILO",
-      "photo": null
-    },
-    {
-      "name": "Xiao Liyuan",
-      "sortKey": "Xiao",
-      "org": "ILO",
       "tbc": true,
+      "linkedin": "https://www.linkedin.com/in/umberto-cattaneo-phd-69564710b/",
+      "photo": null
+    },
+    {
+      "name": "Samia Kazi-Aoul",
+      "sortKey": "Kazi-Aoul",
+      "org": "ILO",
+      "linkedin": "https://www.linkedin.com/in/samia-kazi-aoul-4a47b31/",
       "photo": null
     },
     {
       "name": "Nupur Kukrety",
       "sortKey": "Kukrety",
       "org": "UNICEF",
+      "tbc": true,
+      "linkedin": "https://www.linkedin.com/in/nupur-kukrety-19253a6/",
+      "photo": null
+    },
+    {
+      "name": "Luca Pellerano",
+      "sortKey": "Pellerano",
+      "org": "ILO",
+      "linkedin": "https://www.linkedin.com/in/luca-pellerano-3a4b6a90/",
       "photo": null
     },
     {
       "name": "Mattia Polvanesi",
       "sortKey": "Polvanesi",
       "org": "UNHCR",
+      "tbc": true,
+      "linkedin": "https://www.linkedin.com/in/mattia-polvanesi-a2464a58/",
+      "photo": null
+    },
+    {
+      "name": "Lou Tessier",
+      "sortKey": "Tessier",
+      "org": "ILO",
+      "tbc": true,
+      "linkedin": "https://www.linkedin.com/in/loutessier/",
+      "photo": null
+    },
+    {
+      "name": "Clara Van Panhuys",
+      "sortKey": "Van Panhuys",
+      "org": "ILO",
+      "linkedin": "https://www.linkedin.com/in/clara-van-panhuys-88a11128/",
+      "photo": null
+    },
+    {
+      "name": "Liyuan Xiao",
+      "sortKey": "Xiao",
+      "org": "ILO",
+      "linkedin": "https://www.linkedin.com/in/liyuanxiao/",
       "photo": null
     }
   ],

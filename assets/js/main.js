@@ -24,6 +24,7 @@
     users: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.3c2 .7 3.5 2.6 3.5 5.7"/></svg>',
     download: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>',
     copy: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3V9.75zm6.5 0h3.83v1.54h.06c.53-.95 1.84-1.95 3.78-1.95 4.04 0 4.78 2.55 4.78 5.87V21h-4v-5.07c0-1.21-.02-2.77-1.8-2.77-1.8 0-2.07 1.3-2.07 2.68V21h-4V9.75z"/></svg>',
     chat: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg>'
   };
 
@@ -270,12 +271,14 @@
       root.innerHTML = people.filter(function (p) { return !org || p.org === org; }).map(function (p) {
         var photo = safeUrl(p.photo) || (p.photo && !/^[a-z]+:/i.test(p.photo) ? p.photo : null);
         var flag = personFlag(p);
+        var li = safeUrl(p.linkedin);
         return '<li class="card person">' +
           '<div class="person__photo">' + (photo ? '<img src="' + esc(photo) + '" alt="Photo of ' + esc(p.name) + '" loading="lazy">' : ICON.person) + '</div>' +
           '<h2 class="person__name">' + esc(p.name) + '</h2>' +
           (p.role ? '<p class="person__role">' + esc(p.role) + '</p>' : '') +
           (p.org ? '<p class="person__org">' + esc(p.org) + (p.unit ? ' · ' + esc(p.unit) : '') + '</p>' : '') +
-          (flag ? '<p class="person__flag"><span class="tag tag--past">' + esc(flag) + '</span></p>' : '') +
+          (flag ? '<p class="person__flag"><span class="tag tag--tbc">' + esc(flag) + '</span></p>' : '') +
+          (li ? '<a class="person__li" href="' + esc(li) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(p.name) + ' on LinkedIn (opens in a new tab)">' + ICON.linkedin + '<span>LinkedIn profile</span></a>' : '') +
         '</li>';
       }).join('');
     }
@@ -288,7 +291,7 @@
       draw(b.getAttribute('data-org'));
     });
     draw('');
-    note.textContent = 'Names and organisations are shown as listed in the course agenda. Entries marked “to be confirmed” may change. The ITCILO course team and a STREAM consultant (to be confirmed) also contribute to the live sessions.';
+    note.textContent = 'Entries marked “to be confirmed” may change. The ITCILO course team and a STREAM consultant (to be confirmed) also contribute to the live sessions.';
   }
 
   /* ---------------- Participants & feedback ---------------- */
