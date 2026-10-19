@@ -320,7 +320,7 @@ window.HUB_DATA = {
       "sortKey": "Brener",
       "org": "ISSA",
       "linkedin": "https://www.linkedin.com/in/mariano-brener-a8a2565/",
-      "photo": null
+      "photo": "assets/images/people/mariano-brener.jpg"
     },
     {
       "name": "Umberto Cattaneo",
@@ -373,7 +373,7 @@ window.HUB_DATA = {
       "sortKey": "Van Panhuys",
       "org": "ILO",
       "linkedin": "https://www.linkedin.com/in/clara-van-panhuys-88a11128/",
-      "photo": null
+      "photo": "assets/images/people/clara-van-panhuys.jpg"
     },
     {
       "name": "Liyuan Xiao",
