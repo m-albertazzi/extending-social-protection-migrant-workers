@@ -289,9 +289,9 @@ window.HUB_DATA = {
       "week": 6,
       "title": "Specific Groups (Domestic Migrant Workers, Agricultural Seasonal Migrant Workers and Migrants in an Irregular Situation): Presentation of Group Work and Closing Ceremony",
       "date": "2026-11-27",
-      "timeLabel": "2.00 – 3.30 pm CET",
+      "timeLabel": "2.00 – 4.00 pm CET",
       "start": "2026-11-27T14:00:00+01:00",
-      "end": "2026-11-27T15:30:00+01:00",
+      "end": "2026-11-27T16:00:00+01:00",
       "modules": [
         6
       ],
