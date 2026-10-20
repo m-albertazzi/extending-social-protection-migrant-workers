@@ -383,5 +383,60 @@ window.HUB_DATA = {
       "photo": "assets/images/people/liyuan-xiao.jpg"
     }
   ],
-  "participants": []
+  "participants": [],
+  "participantProfile": {
+    "asOf": "19 October 2026",
+    "total": 36,
+    "note": "Aggregate counts only, taken from the registration list at the start of the course. No names, organizations or contact details are stored here. Each chart is shown on its own and cannot be combined with another.",
+    "nationalities": [
+      { "id": "566", "name": "Nigeria", "region": "Africa", "n": 5 },
+      { "id": "504", "name": "Morocco", "region": "Africa", "n": 5 },
+      { "id": "144", "name": "Sri Lanka", "region": "Asia and the Pacific", "n": 5 },
+      { "id": "524", "name": "Nepal", "region": "Asia and the Pacific", "n": 3 },
+      { "id": "050", "name": "Bangladesh", "region": "Asia and the Pacific", "n": 3 },
+      { "id": "512", "name": "Oman", "region": "Arab States", "n": 2 },
+      { "id": "048", "name": "Bahrain", "region": "Arab States", "n": 1 },
+      { "id": "120", "name": "Cameroon", "region": "Africa", "n": 1 },
+      { "id": "384", "name": "Côte d’Ivoire", "region": "Africa", "n": 1 },
+      { "id": "818", "name": "Egypt", "region": "Africa", "n": 1 },
+      { "id": "356", "name": "India", "region": "Asia and the Pacific", "n": 1 },
+      { "id": "380", "name": "Italy", "region": "Europe and Central Asia", "n": 1 },
+      { "id": "392", "name": "Japan", "region": "Asia and the Pacific", "n": 1 },
+      { "id": "400", "name": "Jordan", "region": "Arab States", "n": 1 },
+      { "id": "634", "name": "Qatar", "region": "Arab States", "n": 1 },
+      { "id": "643", "name": "Russian Federation", "region": "Europe and Central Asia", "n": 1 },
+      { "id": "682", "name": "Saudi Arabia", "region": "Arab States", "n": 1 },
+      { "id": "686", "name": "Senegal", "region": "Africa", "n": 1 },
+      { "id": "548", "name": "Vanuatu", "region": "Asia and the Pacific", "n": 1 }
+    ],
+    "gender": [
+      { "label": "Women", "n": 16 },
+      { "label": "Men", "n": 20 }
+    ],
+    "organisationTypes": [
+      { "label": "Government (other than ministry of labour)", "n": 18 },
+      { "label": "ILO", "n": 6 },
+      { "label": "Ministry of labour", "n": 4 },
+      { "label": "Public institution (other than government)", "n": 3 },
+      { "label": "Other", "n": 2 },
+      { "label": "UN organization (other than ILO)", "n": 1 },
+      { "label": "Intergovernmental organization (other than UN)", "n": 1 },
+      { "label": "Workers’ organization", "n": 1 }
+    ],
+    "constituents": [
+      { "label": "Governments and public institutions", "n": 25 },
+      { "label": "Workers’ organizations", "n": 1 },
+      { "label": "Employers’ organizations", "n": 0 },
+      { "label": "International organizations", "n": 8 },
+      { "label": "Other", "n": 2 }
+    ],
+    "corridors": {
+      "note": "A broad grouping by nationality, for discussion. Most countries are at the same time countries of origin, transit and destination.",
+      "groups": [
+        { "label": "Mainly countries of origin", "countries": ["Bangladesh", "Cameroon", "Egypt", "India", "Nepal", "Nigeria", "Senegal", "Sri Lanka", "Vanuatu"] },
+        { "label": "Countries of origin and destination", "countries": ["Côte d’Ivoire", "Morocco"] },
+        { "label": "Mainly countries of destination", "countries": ["Bahrain", "Italy", "Japan", "Jordan", "Oman", "Qatar", "Russian Federation", "Saudi Arabia"] }
+      ]
+    }
+  }
 };

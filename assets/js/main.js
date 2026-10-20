@@ -295,20 +295,141 @@
   }
 
   /* ---------------- Participants & feedback ---------------- */
+  /* Participant profile: aggregate counts only (data.js participantProfile). Each chart is
+     rendered on its own; there is deliberately no filter that combines dimensions, so small
+     counts cannot be cross-referenced to identify a person. */
+  function sum(list) { return (list || []).reduce(function (a, x) { return a + (x.n || 0); }, 0); }
+  function pct(n, total) { return total ? Math.round(n / total * 100) : 0; }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+
+  function barList(items, total, cls) {
+    var max = Math.max.apply(null, items.map(function (x) { return x.n; }).concat([1]));
+    return '<ul class="bars ' + (cls || '') + '">' + items.map(function (x) {
+      return '<li class="bars__row"><span class="bars__label">' + esc(x.label) + '</span>' +
+        '<span class="bars__track" aria-hidden="true"><span class="bars__fill" style="width:' + (x.n / max * 100).toFixed(1) + '%"></span></span>' +
+        '<span class="bars__val">' + x.n + ' <small>(' + pct(x.n, total) + '%)</small></span></li>';
+    }).join('') + '</ul>';
+  }
+
+  function mapBin(n) { return n >= 4 ? 3 : n >= 2 ? 2 : 1; }
+  function worldMap(nats) {
+    var M = window.HUB_WORLDMAP;
+    if (!M) return '';
+    var byId = {};
+    nats.forEach(function (c) { byId[c.id] = c; });
+    var shapes = M.paths.map(function (p) {
+      var c = byId[p[0]];
+      if (!c) return '<path class="map__land" d="' + p[1] + '"/>';
+      var lab = c.name + ': ' + plural(c.n, 'participant', 'participants');
+      return '<path class="map__c map__c--' + mapBin(c.n) + '" d="' + p[1] + '" data-id="' + c.id + '" tabindex="0" role="img" aria-label="' + esc(lab) + '"><title>' + esc(lab) + '</title></path>';
+    }).join('');
+    /* rings make very small countries (Bahrain, Qatar, Vanuatu) visible at map scale */
+    var small = { '048': 1, '634': 1, '548': 1 };
+    var rings = nats.filter(function (c) { return small[c.id] && M.points[c.id]; }).map(function (c) {
+      var pt = M.points[c.id], lab = c.name + ': ' + plural(c.n, 'participant', 'participants');
+      return '<circle class="map__ring map__c--' + mapBin(c.n) + '" cx="' + pt[0] + '" cy="' + pt[1] + '" r="5.5" data-id="' + c.id + '"><title>' + esc(lab) + '</title></circle>';
+    }).join('');
+    return '<svg class="map__svg" viewBox="' + (M.crop || [0, 0, M.w, M.h]).join(' ') + '" role="group" aria-label="World map of participants’ nationalities">' + shapes + rings + '</svg>';
+  }
+
   function renderParticipants() {
     var root = $('#participants-root');
     if (!root) return;
-    var list = DATA.participants || [];
-    if (!list.length) {
+    var P = DATA.participantProfile;
+    if (!P || !P.total) {
       root.innerHTML = '<div class="empty"><div class="empty__icon">' + ICON.users + '</div>' +
-        '<h3>Participant directory coming soon</h3>' +
-        '<p>The list of participants for this cohort has not been added yet. It will appear here once it is available.</p></div>';
+        '<h3>Participant profile coming soon</h3>' +
+        '<p>An anonymous overview of this cohort will appear here once registration data are available.</p></div>';
       return;
     }
-    root.innerHTML = '<ul class="pdir">' + list.map(function (p) {
-      var line = [p.organisation, p.country].filter(Boolean).join(' · ');
-      return '<li class="card pdir__item"><strong>' + esc(p.name) + '</strong>' + (line ? '<span>' + esc(line) + '</span>' : '') + '</li>';
-    }).join('') + '</ul>';
+    var nats = (P.nationalities || []).slice().sort(function (a, b) { return b.n - a.n || a.name.localeCompare(b.name); });
+    var total = P.total;
+    var regions = {};
+    nats.forEach(function (c) { regions[c.region] = (regions[c.region] || 0) + c.n; });
+    var regionList = Object.keys(regions).map(function (k) { return { label: k, n: regions[k] }; })
+      .sort(function (a, b) { return b.n - a.n || a.label.localeCompare(b.label); });
+    var women = (P.gender || []).filter(function (g) { return /women/i.test(g.label); })[0];
+    var byName = {};
+    nats.forEach(function (c) { byName[c.name] = c.n; });
+
+    var html = '';
+    /* headline figures */
+    html += '<ul class="stats stats--profile">' +
+      '<li class="stat"><span class="stat__num">' + total + '</span><span class="stat__label">participants</span></li>' +
+      '<li class="stat"><span class="stat__num">' + nats.length + '</span><span class="stat__label">nationalities</span></li>' +
+      '<li class="stat"><span class="stat__num">' + regionList.length + '</span><span class="stat__label">ILO regions</span></li>' +
+      '<li class="stat"><span class="stat__num">' + (women ? pct(women.n, total) : 0) + '%</span><span class="stat__label">women</span></li>' +
+      '</ul>';
+
+    /* map */
+    html += '<div class="block"><h2 class="block__title">Where participants come from</h2>' +
+      '<p class="lead">By nationality. The map shows Africa, Europe, the Arab States and Asia and the Pacific, where all participants come from. Hover over, tap or tab to a country to see the number of participants.</p>' +
+      '<div class="card card--pad map">' +
+      '<div class="map__figure">' + worldMap(nats) +
+      '<p class="map__readout" id="map-readout" aria-live="polite">Select a highlighted country</p>' +
+      '<ul class="map__legend" aria-label="Legend">' +
+      '<li><span class="map__key map__c--1"></span>1 participant</li>' +
+      '<li><span class="map__key map__c--2"></span>2 to 3</li>' +
+      '<li><span class="map__key map__c--3"></span>4 to 5</li></ul>' +
+      '<p class="map__disclaimer">The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the ILO.</p></div>' +
+      '<div class="map__side"><h3 class="card__title">Nationalities</h3><ol class="natlist">' +
+      nats.map(function (c) { return '<li data-id="' + c.id + '"><span>' + esc(c.name) + '</span><strong>' + c.n + '</strong></li>'; }).join('') +
+      '</ol></div></div>' +
+      '<div class="card card--pad profile-card"><h3 class="card__title">By ILO region</h3>' + barList(regionList, total) + '</div></div>';
+
+    /* gender + constituents */
+    var g = P.gender || [];
+    html += '<div class="block block--split">' +
+      '<div class="card card--pad profile-card"><h3 class="card__title">Gender</h3>' +
+      '<div class="split-bar" role="img" aria-label="' + esc(g.map(function (x) { return x.label + ' ' + x.n + ' (' + pct(x.n, total) + '%)'; }).join(', ')) + '">' +
+      g.map(function (x, i) { return '<span class="split-bar__seg split-bar__seg--' + i + '" style="flex:' + x.n + '">' + pct(x.n, total) + '%</span>'; }).join('') + '</div>' +
+      '<ul class="split-legend">' + g.map(function (x, i) { return '<li><span class="split-legend__key split-bar__seg--' + i + '"></span>' + esc(x.label) + ' <strong>' + x.n + '</strong></li>'; }).join('') + '</ul></div>' +
+      '<div class="card card--pad profile-card"><h3 class="card__title">ILO constituents and partners</h3>' +
+      '<ul class="tiles">' + (P.constituents || []).map(function (x) {
+        return '<li class="tile' + (x.n === 0 ? ' tile--zero' : '') + '"><strong>' + x.n + '</strong><span>' + esc(x.label) + '</span></li>';
+      }).join('') + '</ul>' +
+      '<p class="note">Social dialogue needs all three constituents: think about how the voices of workers’ and employers’ organizations can be brought into your group work.</p></div>' +
+      '</div>';
+
+    /* organization type */
+    html += '<div class="block"><h2 class="block__title">Type of organization</h2>' +
+      '<div class="card card--pad profile-card">' + barList(P.organisationTypes || [], total, 'bars--org') + '</div></div>';
+
+    /* origin and destination */
+    if (P.corridors && P.corridors.groups) {
+      var groups = P.corridors.groups.map(function (gr) {
+        return { label: gr.label, countries: gr.countries, n: gr.countries.reduce(function (a, c) { return a + (byName[c] || 0); }, 0) };
+      });
+      html += '<div class="block"><h2 class="block__title">Countries of origin and destination in the room</h2>' +
+        '<div class="card card--pad profile-card">' +
+        '<div class="split-bar split-bar--three" role="img" aria-label="' + esc(groups.map(function (x) { return x.label + ' ' + x.n; }).join(', ')) + '">' +
+        groups.map(function (x, i) { return '<span class="split-bar__seg split-bar__seg--c' + i + '" style="flex:' + x.n + '">' + x.n + '</span>'; }).join('') + '</div>' +
+        '<div class="corridors">' + groups.map(function (x, i) {
+          return '<div class="corridors__group"><h4><span class="split-legend__key split-bar__seg--c' + i + '"></span>' + esc(x.label) + ' <strong>' + plural(x.n, 'participant', 'participants') + '</strong></h4>' +
+            '<ul class="chips">' + x.countries.map(function (c) { return '<li class="chip">' + esc(c) + '</li>'; }).join('') + '</ul></div>';
+        }).join('') + '</div>' +
+        '<p class="note">' + esc(P.corridors.note) + '</p></div></div>';
+    }
+
+    html += '<p class="note">Figures as of ' + esc(P.asOf) + '. ' + esc(P.note) + '</p>';
+    root.innerHTML = html;
+
+    /* map interaction: hover, focus or tap updates the readout and highlights the list */
+    var readout = $('#map-readout');
+    var byId = {};
+    nats.forEach(function (c) { byId[c.id] = c; });
+    function pick(id) {
+      var c = byId[id];
+      $$('.natlist li', root).forEach(function (li) { li.classList.toggle('is-on', li.getAttribute('data-id') === id); });
+      $$('[data-id]', $('.map__svg', root) || root).forEach(function (el) { el.classList.toggle('is-on', el.getAttribute('data-id') === id); });
+      if (readout) readout.textContent = c ? c.name + ': ' + plural(c.n, 'participant', 'participants') : 'Select a highlighted country';
+    }
+    $$('.map__svg [data-id], .natlist li', root).forEach(function (el) {
+      var id = el.getAttribute('data-id');
+      el.addEventListener('mouseenter', function () { pick(id); });
+      el.addEventListener('focus', function () { pick(id); });
+      el.addEventListener('click', function () { pick(id); });
+    });
   }
 
   function renderFeedback() {
