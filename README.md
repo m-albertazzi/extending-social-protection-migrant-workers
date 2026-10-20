@@ -9,7 +9,8 @@ Plain HTML, CSS and JavaScript: no build step. Open `index.html`, or publish the
 index.html              page shell, static sections (Overview, Course requirements, Participants, Feedback)
 assets/css/fonts.css    ITCILO brand typeface (Noto Sans variable font, self-hosted in assets/fonts/), shared with the simulation
 assets/css/styles.css   all styling; palette tokens (derived from the hero image) are at the top
-assets/js/data.js       content data: weeks, sessions, resource persons, participants, feedback link
+assets/js/data.js       content data: weeks, sessions, resource persons, participant profile (aggregate counts only), feedback link
+assets/js/worldmap.js   base world map geometry for the Participants map (Natural Earth 1:110m, public domain)
 assets/js/main.js       section routing, mobile menu, rendering of timetable / people / participants
 assets/images/          itcilo-logo.png, hero.png (+ webp variants; hero-banner*.webp adds headroom above the birds), people/ (photos)
 simulation/within-reach.html   self-contained decision simulation, embedded in the "Simulation: Within reach" tab
@@ -20,7 +21,7 @@ simulation/within-reach.html   self-contained decision simulation, embedded in t
 - **Zoom links:** set `zoomUrl` on each session, e.g. `"zoomUrl": "https://..."`. Until then the button is a placeholder.
 - **Feedback form:** set `config.feedbackUrl` to the form address. Until then the button is a placeholder.
 - **Resource person photos:** save an image in `assets/images/people/` and set `photo` to e.g. `"assets/images/people/name.jpg"`. Add `role` if a title is confirmed.
-- **Participants:** add entries to `participants`, e.g. `{ "name": "…", "organisation": "…", "country": "…" }`. Only list details participants have agreed to share.
+- **Participant profile:** update the counts in `participantProfile` (nationality, gender, type of organization, constituents). Aggregate counts only: never add names, organizations, positions, emails or other personal data, and never commit the registration export to this repository.
 - **Confirmed names:** remove `tbc` / `partial` on a person once the agenda is confirmed.
 
 ## Content sources
