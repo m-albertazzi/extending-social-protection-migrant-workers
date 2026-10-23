@@ -273,7 +273,7 @@ window.HUB_DATA = {
       "modules": [
         7
       ],
-      "speakers": "Panel discussion: Clara Van Panhuys, ILO; Nupur Kukrety, UNICEF (TBC); Mattia Polvanesi, UNHCR (TBC)",
+      "speakers": "Panel discussion: Clara Van Panhuys, ILO; Nupur Kukrety, UNICEF (TBC); Mauro Clerici, UNHCR",
       "summary": "A panel bringing together ILO, UNICEF and UNHCR perspectives on refugees' access to social protection: the international legal framework, the obstacles, and the case for integrating refugees into national systems.",
       "abstract": "Refugees and asylum seekers face specific obstacles in accessing social protection: temporary legal status, an unpredictable length of stay, limited contribution histories, no protection from their country of origin and restricted access to the formal labour market, which in turn limits their access to contributory schemes. This panel discussion brings together ILO, UNICEF and UNHCR perspectives on the international legal framework – including the 1951 Refugee Convention, the ICESCR, the Convention on the Rights of the Child, the Global Compact on Refugees and the ILO guiding principles – and on the case for integrating refugees into national contributory and non-contributory systems rather than parallel humanitarian structures, including by channelling emergency cash transfers through existing systems. It also considers displacement in the context of climate change and how social protection can respond.",
       "objectives": [
@@ -353,12 +353,11 @@ window.HUB_DATA = {
       "photo": "assets/images/people/luca-pellerano.jpg"
     },
     {
-      "name": "Mattia Polvanesi",
-      "sortKey": "Polvanesi",
+      "name": "Mauro Clerici",
+      "sortKey": "Clerici",
       "org": "UNHCR",
-      "tbc": true,
-      "linkedin": "https://www.linkedin.com/in/mattia-polvanesi-a2464a58/",
-      "photo": "assets/images/people/mattia-polvanesi.jpg"
+      "linkedin": "https://www.linkedin.com/in/mauro-clerici-6502657a",
+      "photo": "assets/images/people/mauro-clerici.jpg"
     },
     {
       "name": "Lou Tessier",
