@@ -278,7 +278,8 @@
           (p.role ? '<p class="person__role">' + esc(p.role) + '</p>' : '') +
           (p.org ? '<p class="person__org">' + esc(p.org) + (p.unit ? ' · ' + esc(p.unit) : '') + '</p>' : '') +
           (flag ? '<p class="person__flag"><span class="tag tag--tbc">' + esc(flag) + '</span></p>' : '') +
-          (li ? '<a class="person__li" href="' + esc(li) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(p.name) + ' on LinkedIn (opens in a new tab)">' + ICON.linkedin + '<span>LinkedIn profile</span></a>' : '') +
+          (li ? '<a class="person__li" href="' + esc(li) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(p.name) + ' on LinkedIn (opens in a new tab)">' + ICON.linkedin + '<span>LinkedIn profile</span></a>'
+              : '<span class="person__li is-pending" role="link" aria-disabled="true" aria-label="LinkedIn profile for ' + esc(p.name) + ' to be added">' + ICON.linkedin + '<span>LinkedIn profile</span></span>') +
         '</li>';
       }).join('');
     }

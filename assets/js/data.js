@@ -140,7 +140,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Clara Van Panhuys, ILO; Lou Tessier, ILO (TBC)",
+      "speakers": "Clara Van Panhuys, ILO; Caroline Phily, ILO",
       "summary": "Presents the unilateral measures countries of employment can adopt on their own, such as equality of treatment, flexible qualifying conditions and non-contributory measures, with a particular focus on health protection.",
       "abstract": "Countries of employment can decide to extend social protection to migrant workers on their own, without waiting for an agreement with another State. This session presents the unilateral measures available to them: enshrining equality of treatment in law – the ILO’s mapping of 120 countries found that 58 per cent grant it for contributory social security and 62 per cent for healthcare – allowing exportability of benefits, adapting qualifying conditions (retroactive payment of missed contributions, pro rata benefits, exemption from double coverage), and lump-sum payments or reimbursement of contributions. It then considers non-contributory measures and national social protection floors, with a particular focus on health protection, drawing on country examples such as Thailand, Switzerland and Argentina on access to healthcare for migrants, including those in an irregular situation.",
       "objectives": [
@@ -360,12 +360,11 @@ window.HUB_DATA = {
       "photo": "assets/images/people/mauro-clerici.jpg"
     },
     {
-      "name": "Lou Tessier",
-      "sortKey": "Tessier",
+      "name": "Caroline Phily",
+      "sortKey": "Phily",
       "org": "ILO",
-      "tbc": true,
-      "linkedin": "https://www.linkedin.com/in/loutessier/",
-      "photo": "assets/images/people/lou-tessier.jpg"
+      "linkedin": null,
+      "photo": null
     },
     {
       "name": "Clara Van Panhuys",

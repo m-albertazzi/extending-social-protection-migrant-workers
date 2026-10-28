@@ -381,6 +381,8 @@ strong { font-weight: 700; color: var(--ink); }
 .person__flag { margin: -.4rem 0 .9rem; }
 .tag--tbc { background: var(--marigold-100); color: var(--rust-700); border: 1px dashed var(--marigold-600); }
 .person__li { margin-top: auto; display: inline-flex; align-items: center; gap: .45rem; min-height: 38px; font-size: .85rem; font-weight: 700; color: var(--teal-900); border: 2px solid var(--teal-900); border-radius: 999px; padding: .3rem .85rem; text-decoration: none; transition: background-color .15s, color .15s; }
+.person__li.is-pending { border-style: dashed; border-color: var(--marigold-600); color: var(--ink-soft); background: var(--marigold-100); cursor: default; }
+.person__li.is-pending:hover { background: var(--marigold-100); border-color: var(--marigold-600); color: var(--ink-soft); }
 .person__li svg { width: 16px; height: 16px; flex: none; }
 .person__li:hover, .person__li:focus-visible { background: #0A66C2; border-color: #0A66C2; color: #fff; }
 
