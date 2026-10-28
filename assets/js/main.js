@@ -292,7 +292,9 @@
       draw(b.getAttribute('data-org'));
     });
     draw('');
-    note.textContent = 'Entries marked “to be confirmed” may change.';
+    var anyTbc = people.some(function (p) { return p.tbc || p.partial; });
+    note.textContent = anyTbc ? 'Entries marked “to be confirmed” may change.' : '';
+    note.hidden = !anyTbc;
   }
 
   /* ---------------- Participants & feedback ---------------- */
