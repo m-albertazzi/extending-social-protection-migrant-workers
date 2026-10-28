@@ -251,7 +251,7 @@ window.HUB_DATA = {
       "modules": [
         5
       ],
-      "speakers": "Umberto Cattaneo, ILO (TBC)",
+      "speakers": "Umberto Cattaneo, ILO",
       "summary": "Examines how extending social protection to migrant workers can be financed: fiscal space, subsidised contributions and solidarity-based financing, and the case that inclusion improves financial sustainability.",
       "abstract": "Extending social protection to migrant workers only lasts if it can be financed. This session looks at the financing challenges identified in the Guide – migrant workers’ often limited contributory capacity, and limited fiscal space and investment in social protection – and at the options available: enhancing fiscal space (through reallocating public expenditure, increasing tax revenue, expanding contributions and other options), subsidising the contributions of migrant workers or refugees, including through international solidarity, and financing benefits collectively on the principle of solidarity, rather than from migrants’ fees alone, as the guidance on migrant welfare funds stresses. It also considers the case that inclusion improves financial sustainability by widening the risk pool and the contributory base, and the role of costing and fiscal space analyses in preparing reforms.",
       "objectives": [
@@ -273,7 +273,7 @@ window.HUB_DATA = {
       "modules": [
         7
       ],
-      "speakers": "Panel discussion: Clara Van Panhuys, ILO; Nupur Kukrety, UNICEF (TBC); Mauro Clerici, UNHCR",
+      "speakers": "Panel discussion: Clara Van Panhuys, ILO; Sarah Bou Ajram, UNICEF; Mauro Clerici, UNHCR",
       "summary": "A panel bringing together ILO, UNICEF and UNHCR perspectives on refugees' access to social protection: the international legal framework, the obstacles, and the case for integrating refugees into national systems.",
       "abstract": "Refugees and asylum seekers face specific obstacles in accessing social protection: temporary legal status, an unpredictable length of stay, limited contribution histories, no protection from their country of origin and restricted access to the formal labour market, which in turn limits their access to contributory schemes. This panel discussion brings together ILO, UNICEF and UNHCR perspectives on the international legal framework – including the 1951 Refugee Convention, the ICESCR, the Convention on the Rights of the Child, the Global Compact on Refugees and the ILO guiding principles – and on the case for integrating refugees into national contributory and non-contributory systems rather than parallel humanitarian structures, including by channelling emergency cash transfers through existing systems. It also considers displacement in the context of climate change and how social protection can respond.",
       "objectives": [
@@ -326,7 +326,6 @@ window.HUB_DATA = {
       "name": "Umberto Cattaneo",
       "sortKey": "Cattaneo",
       "org": "ILO",
-      "tbc": true,
       "linkedin": "https://www.linkedin.com/in/umberto-cattaneo-phd-69564710b/",
       "photo": "assets/images/people/umberto-cattaneo.jpg"
     },
@@ -338,12 +337,11 @@ window.HUB_DATA = {
       "photo": "assets/images/people/samia-kazi-aoul.jpg"
     },
     {
-      "name": "Nupur Kukrety",
-      "sortKey": "Kukrety",
+      "name": "Sarah Bou Ajram",
+      "sortKey": "Bou Ajram",
       "org": "UNICEF",
-      "tbc": true,
-      "linkedin": "https://www.linkedin.com/in/nupur-kukrety-19253a6/",
-      "photo": "assets/images/people/nupur-kukrety.jpg"
+      "linkedin": "https://www.linkedin.com/in/sarah-bou-ajram-8b329422/",
+      "photo": "assets/images/people/sarah-bou-ajram.jpg"
     },
     {
       "name": "Luca Pellerano",
